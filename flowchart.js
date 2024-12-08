@@ -39,8 +39,8 @@ Parser.init().then(async () => {
 		if (!Lang)
 			throw "fail load Language";
 	 } catch(e) {
-		 alert("Syntax Error in code ");
-		dm("Error");
+		 alert("Error exception ");
+		dm(e.message,"exception");
 		return;
 	}
 	parser.setLanguage(Lang)
@@ -55,7 +55,8 @@ async function flowchartCpp(sourceCode, fileName = "") {
 	let tree = await parser.parse(sourceCode)
 	const rootNode = await tree.rootNode;
 	if (rootNode.hasError) {
-		dm("error", "ERROR")
+    alert("Syntax Error in code ");
+	//dm("error", "ERROR")
 		return;
 	}
 	
