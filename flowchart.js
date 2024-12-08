@@ -39,7 +39,8 @@ Parser.init().then(async () => {
 		if (!Lang)
 			throw "fail load Language";
 	 } catch(e) {
-		dm(e.message, "Exception")
+		 alert("Syntax Error in code );
+		dm("Error");
 		return;
 	}
 	parser.setLanguage(Lang)
