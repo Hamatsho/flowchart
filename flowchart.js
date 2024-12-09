@@ -342,7 +342,7 @@ async function flowchartCpp(sourceCode, fileName = "") {
 			let bodyLoop = node.namedChildren[length -1];
 			currentLoopForContinue = updateLoop.idNahool;
 			// make group
-			let keyGroup = bodyLoop.idNahool;
+			let keyGroup = bodyLoop.idNahool+"Gro";
 			nodeData.push(makeGroup(keyGroup, node.text.split("\n")[0]))
 			checkStartDoWhile(keyGroup)
 			//link to groug
